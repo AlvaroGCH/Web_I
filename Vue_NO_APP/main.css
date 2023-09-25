@@ -1,0 +1,74 @@
+body {
+    text-align: center;
+    background-color: mediumvioletred;
+    font-weight: bolder;
+}
+
+table {
+    margin: auto;
+    border: solid black 10px;
+    margin-top: 150px;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: black;
+    color: indigo;
+    font-size: 2em;
+}
+
+#contadorJugador, #contadorMaquina{
+    background-color: goldenrod;
+}
+
+tfoot{
+    border: black solid 4px;
+}
+
+tbody tr>td{
+    border-right: rgba(0, 0, 0, .5) dashed 2px;
+}
+
+tfoot tr>td{
+    border: black solid 4px;
+}
+
+button{
+    border-radius: 10px;
+    margin-top: 10px;
+    font-family: cursive;
+    background-color: khaki;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+}
+
+.pista{
+    margin-top: 20px;
+    background-color: magenta;
+    display: inline-block ;
+    border-radius: 10px;
+    padding: 10px;
+    border: solid 2px black;
+}
+
+.shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}

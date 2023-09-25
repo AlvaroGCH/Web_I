@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Key Game</title>
+</head>
+<body>
+    <div id='app'>
+        <table>
+        <thead> 
+            <th colspan="2">{{ titulo }}</th>
+        </thead>
+        <tbody>
+            <td><img :class="{'shake' : animated_iz}" v-bind:src="src" alt="" v-on:click="izquierda" width="250" height="250"></td>
+            <td><img :class="{'shake' : animated_der}" v-bind:src="src2" alt="" v-on:click="derecha" width="250" height="250"></td>
+        </tbody>
+        <tfoot>
+            <td id="contadorJugador">{{puntosJ+contadorJugador}}</td>
+            <td id="contadorMaquina">{{puntosM+contadorMaquina}}</td>
+        </tfoot>
+        </table>
+        <button v-on:click="reset">Reiniciar contadores</button>
+        <button v-on:click="clue">Pista</button>
+        <br><div v-show = "isShow" class="pista"> La llave esta en la mano {{ mano }}</div>
+    </div>  
+</body>
+</html>
+<script src="vue.js"></script>
+<script src="main.js"></script>
